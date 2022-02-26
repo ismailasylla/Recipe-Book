@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from '../../shared/recipe.model';
+
 
 @Component({
   selector: 'app-recipe-list',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeListComponent implements OnInit {
 
+  recipes?: Recipe [] = [
+    {
+      name:'First recipe',
+      description:'This is our first recipe',
+      imagePath:'https://icon-library.com/images/recipe-icon-png/recipe-icon-png-8.jpg'
+    }
+
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
